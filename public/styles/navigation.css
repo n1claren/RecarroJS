@@ -14,7 +14,7 @@ body {
 
 header,
 footer {
-    background-color: #29303c;
+    background-color: #000000;
     width: 100%;
     overflow: hidden;
     color: white;
@@ -26,21 +26,22 @@ footer {
 }
 
 header {
+    color: red;
+    display: flex;
+    align-items: center;
     position: relative;
     padding: 10px;
 }
 
 header h1 {
-    display: inline-block;
-    background-color: #29303c;
-    color: white;
+    background-color: #000000;
     margin-bottom: auto;
 }
 
 header nav {
     font-size: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 8px;
 }
