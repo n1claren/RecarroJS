@@ -26,7 +26,7 @@ footer {
 }
 
 header {
-    color: red;
+    color: yellow;
     display: flex;
     align-items: center;
     position: relative;
@@ -64,12 +64,12 @@ nav a {
 
 nav a:hover {
     cursor: pointer;
-    color: rgb(82, 133, 139);
+    color: red;
     font-weight: bolder;
 }
 
-.home:hover {
-    color: rgb(82, 133, 139);
+h1:hover {
+    color: red;
 }
 
 #user,

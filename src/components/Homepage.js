@@ -4,9 +4,11 @@ const Homepage = () => {
             <div className="welcome-panel">
                 <div className="welcome-message">
                     <h2>Sell your car fast</h2>
+                    <img src="./images/golf.png" alt="car" />
                     <h3>Buy a new one even faster</h3>
+                    <img src="./images/pngwing.com.png" alt="car" />
                 </div>
-                <img src="./images/pngwing.com.png" alt="car" />
+                
             </div>
 
             <div id="home-page">

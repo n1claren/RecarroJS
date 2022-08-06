@@ -14,13 +14,11 @@
 }
 
 #welcome-world .welcome-message {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     z-index: 999;
-    margin: auto;
-    left: 0;
     top: 40%;
     text-align: center;
-    width: 30%
 }
 
 #welcome-world>img {
@@ -33,9 +31,10 @@
 }
 
 .welcome-message h2 {
-    color: #ffffff;
+    color: black;
+    -webkit-text-stroke: 1px yellow;
     font-size: 300%;
-    font-size: 55px;
+    font-size: 500%;
     line-height: 1;
     font-weight: 700;
     letter-spacing: normal;
@@ -46,7 +45,9 @@
 }
 
 .welcome-message h3 {
-    color: #ffffff;
+    color: black;
+    -webkit-text-stroke: 1px yellow;
+    border-color: yellow;
     font-size: 600%;
     text-shadow: none;
     line-height: 1;
