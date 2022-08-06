@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Login = () => {
     return (
         <section id="login-page" className="auth">
@@ -9,14 +11,14 @@ const Login = () => {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Sokka@gmail.com"
+                        placeholder="n1claren@gmail.com"
                     />
                     <label htmlFor="login-pass">Password:</label>
                     <input type="password" id="login-password" name="password" />
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
                         <span>
-                            If you don't have profile click <a href="#">here</a>
+                            If you don't have profile click <Link to="/Register">here</Link>
                         </span>
                     </p>
                 </div>

@@ -1,46 +1,41 @@
 #login-page {
+    background-image: url("../images/loginformimage.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
     position: relative;
-    width: 650px;
+    width: 40%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
-    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+    box-shadow: 0px 0px 32px 0px yellow, -14px -14px 20px #191c21;
 }
 
 #register-page {
+    background-image: url("../images/registerformimage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
     position: relative;
-    width: 650px;
+    width: 40%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
-    box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+    box-shadow: 0px 0px 32px 0px yellow, -14px -14px 20px #191c21;
 }
 
 .container {
     padding: 40px;
 }
 
-.brand-logo {
-    height: 100px;
-    width: 100px;
-    background: url("../images/icon-gamepad-2.png");
-    margin: auto;
-    border-radius: 50%;
-    box-sizing: border-box;
-    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
-}
-
 .container>h1 {
-    margin-top: 15px;
     font-weight: 900;
-    font-size: 2.7rem;
+    font-size: 3.7rem;
     text-align: center;
-    color: white;
-    letter-spacing: 1px;
+    color: yellow;
+    letter-spacing: 3px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 17px;
 }
@@ -71,7 +66,6 @@ input::placeholder {
     color: rgba(184, 179, 179, 0.678);
 };
 
-
 label[for="female"] {
     margin-top: 10px;
 }
@@ -80,14 +74,14 @@ input[type="nickname"],
 input[type="password"],
 input[type="number"],
 input[type="email"] {
-    background: #ecf0f3;
+    background: white;
     padding: 30px;
     padding-left: 20px;
     height: 50px;
     margin-top: 10px;
     font-size: 24px;
     border-radius: 50px;
-    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px yellow;
 }
 
 label[for="terms"]>input {
@@ -95,21 +89,22 @@ label[for="terms"]>input {
 }
 
 .btn.submit {
-    margin-top: 30px;
-    background: #778e9c;
+    margin-top: 50px;
+    background: white;
+    width: 30%;
     height: 60px;
     border-radius: 20px;
-    color: white;
+    color: black;
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px yellow;
     transition: 0.5s;
 }
 
 .btn.submit:hover {
     color: white;
-    background-color: #8fa9b9;
+    background-color: red;
 }
 
 .container {
@@ -123,8 +118,7 @@ label[for="terms"]>input {
     bottom: 17px;
     right: 8px;
     text-decoration: none;
-    color: black;
-    background: rgb(235, 157, 142);
+    color: red;
     border-radius: 10px;
     padding: 5px;
 }
