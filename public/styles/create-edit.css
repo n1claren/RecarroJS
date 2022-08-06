@@ -1,14 +1,17 @@
 #create-page,
 #edit-page {
+    background-image: url("../images/listformimage.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
     position: relative;
-    width: 800px;
+    width: 40%;
     height: auto;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
     text-align: center;
-    background: #3e4443;
-    box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
+    box-shadow: 0px 0px 32px 0px yellow, -14px -14px 20px #191c21;
 }
 
 input[type="text"] {
@@ -19,7 +22,7 @@ input[type="text"] {
     margin-top: 10px;
     font-size: 24px;
     border-radius: 50px;
-    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    box-shadow: inset 6px 6px 6px yellow, inset -6px -6px 6px white;
 }
 
 textarea {
@@ -34,5 +37,5 @@ textarea {
     border-right-color: #ecf0f3;
     margin-top: 7px;
     color: black;
-    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    box-shadow: inset 6px 6px 6px yellow, inset -6px -6px 6px white;
 }
