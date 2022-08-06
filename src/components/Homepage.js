@@ -1,3 +1,5 @@
+import CarCard from "./CarCard";
+
 const Homepage = () => {
     return (
         <section id="welcome-world">
@@ -8,22 +10,17 @@ const Homepage = () => {
                     <h3>Buy a new one even faster</h3>
                     <img src="./images/pngwing.com.png" alt="car" />
                 </div>
-                
+
             </div>
 
             <div id="home-page">
                 <h1>Last added cars</h1>
-                {/* Display div: with information about every car (if any) */}
-                <div className="car">
-                    <div className="image-wrap">
-                        <img src="./images/chiron.png" />
-                    </div>
-                    <h3>Bugatti Chiron</h3>
-                    <div className="data-buttons">
-                        <a href="#" className="btn details-btn">
-                            Details
-                        </a>
-                    </div>
+
+                {/* Generate 3 cars from server later on */}
+                <div className="last-cards">
+                    <CarCard />
+                    <CarCard />
+                    <CarCard />
                 </div>
 
                 {/* Display paragraph: If there is no cars  */}

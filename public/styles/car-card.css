@@ -1,0 +1,26 @@
+.card {
+    border: 1px solid yellow;
+    width: 30%;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+.card-body {
+    color: white;
+    font-size: 22px;
+    padding: 20px;
+}
+
+.card-title {
+    padding: 10px;
+}
+
+.card-text {
+    padding: 10px;
+}
+
+.card-body a {
+    padding: 10px;
+}

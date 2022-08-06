@@ -39,6 +39,20 @@ const CreateCar = () => {
                         name="imageUrl"
                         placeholder="Your car image..."
                     />
+                    <label htmlFor="price">Price:</label>
+                    <input
+                        type="number"
+                        id="price"
+                        name="price"
+                        placeholder="Your car price..."
+                    />
+                    <label htmlFor="phone">Phone Number:</label>
+                    <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        placeholder="Phone for contact..."
+                    />
                     <label htmlFor="description">Description:</label>
                     <textarea name="description" id="description"></textarea>
                     <input className="btn submit" type="submit" value="List Car" />

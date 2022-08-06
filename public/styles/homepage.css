@@ -94,20 +94,6 @@
     color: rgb(204, 144, 131);
 }
 
-.image-wrap {
-    width: 250px;
-    height: 250px;
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-}
-
-.image-wrap>img {
-    max-width: 100%;
-}
-
 .car>h3 {
     font-family: "Agency FB";
     font-size: 42px;
@@ -180,4 +166,9 @@
     font-weight: 700;
     font-size: 60px;
     font-family: "Agency FB";
+}
+
+.last-cards {
+    display: flex;
+    padding-left: 100px;
 }
