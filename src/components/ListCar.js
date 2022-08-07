@@ -41,7 +41,7 @@ const CreateCar = () => {
                     />
                     <label htmlFor="price">Price:</label>
                     <input
-                        type="number"
+                        type="text"
                         id="price"
                         name="price"
                         placeholder="Your car price..."
@@ -51,7 +51,7 @@ const CreateCar = () => {
                         type="text"
                         id="phone"
                         name="phone"
-                        placeholder="Phone for contact..."
+                        placeholder="+359XXXXXXXXX"
                     />
                     <label htmlFor="description">Description:</label>
                     <textarea name="description" id="description"></textarea>

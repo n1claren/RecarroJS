@@ -15,7 +15,7 @@ const EditCar = () => {
                     <label htmlFor="car-img">Image:</label>
                     <input type="text" id="imageUrl" name="imageUrl" value="" />
                     <label htmlFor="price">Price:</label>
-                    <input type="number" id="price" name="price" value="" />
+                    <input type="text" id="price" name="price" value="" />
                     <label htmlFor="phone">Phone Number:</label>
                     <input type="text" id="phone" name="phone" value="" />
                     <label htmlFor="description">Description:</label>

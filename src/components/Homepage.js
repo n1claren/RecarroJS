@@ -1,6 +1,7 @@
 import CarCard from "./CarCard";
 
-const Homepage = () => {
+const Homepage = (cars) => {
+
     return (
         <section id="welcome-world">
             <div className="welcome-panel">
@@ -16,15 +17,10 @@ const Homepage = () => {
             <div id="home-page">
                 <h1>Last added cars</h1>
 
-                {/* Generate 3 cars from server later on */}
-                <div className="last-cards">
-                    <CarCard />
-                    <CarCard />
-                    <CarCard />
-                </div>
-
-                {/* Display paragraph: If there is no cars  */}
-                <p className="no-articles">No cars yet</p>
+                {cars.length > 0
+                    ? cars.map(x => <CarCard key={x._id} car={x} />)
+                    : <p className="no-articles">No cars yet</p>
+                }
             </div>
         </section>
     );

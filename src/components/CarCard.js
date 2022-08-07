@@ -1,11 +1,20 @@
-const CarCard = () => {
+import { Link } from "react-router-dom";
+
+const CarCard = ({  
+    _id,
+    make,
+    model,
+    year,
+    price,
+    imageUrl
+}) => {
     return (
         <div className="card">
-            <img className="card-img-top" src="https://automedia.investor.bg/media/files/resized/uploadedfiles/640x0/bf4/764ac66980b216a8207ba2caf5302bf4-07-1.jpg" alt="car image" />
+            <img className="card-img-top" src={imageUrl} alt="car" />
             <div className="card-body">
-                <h5 className="card-title">2020 Lamborghini Huracan</h5>
-                <p className="card-text">174,000$</p>
-                <a href="#" className="btn details-btn">Details</a>
+                <h5 className="card-title">{year} {make} {model}</h5>
+                <p className="card-text">{price}</p>
+                <Link to={`/AllCars/${_id}`} className="btn details-btn">Details</Link>
             </div>
         </div>
     );
