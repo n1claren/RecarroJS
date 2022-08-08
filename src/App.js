@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import ListCar from "./components/ListCar";
 import AllCars from './components/AllCars.js';
+import CarDetails from './components/CarDetails';
 
 function App() {
     const [cars, setCars] = useState([]);
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/Register" element={<Register />} />
                 <Route path="/ListCar" element={<ListCar />} />
                 <Route path="/AllCars" element={<AllCars cars={cars} />} />
+                <Route path="/AllCars/:carId" element={<CarDetails cars={cars} />} />
             </Routes>
             
             <Footer />
