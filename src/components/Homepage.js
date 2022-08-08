@@ -15,12 +15,12 @@ const Homepage = ({ cars }) => {
             </div>
 
             <div id="home-page">
-                <h1>Last added cars</h1>
+                <h1>Last three added cars:</h1>
 
                 <div className="car-container">
                     {cars.length > 0
-                        ? cars.map(x => <CarCard key={x._id} car={x} />)
-                        : <p className="no-articles">No cars yet</p>
+                        ? cars.slice(-3).map(x => <CarCard key={x._id} car={x} />)
+                        : <p className="no-articles">There are no cars in the system.</p>
                     }
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const CarCard = ({car}) => {
+const CarCard = ({ car }) => {
     return (
         <div className="card">
             <img className="card-img-top" src={car.imageUrl} alt="car" />

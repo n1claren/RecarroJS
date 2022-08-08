@@ -1343,7 +1343,7 @@
                 "imageUrl": "https://supercars.bg/wp-content/uploads/2020/01/Lamborghini-Huracan-EVO-Rear-Wheel-Drive5.jpg",
                 "price": "174,000$",
                 "phone": "+359878589679",
-                "description": "Full Extras, 12k kilometers, mint condition",
+                "description": "Full Extras, 12.000 kilometers, mint condition",
                 "_createdOn": 1617194128618,
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
@@ -1355,7 +1355,7 @@
                 "imageUrl": "https://img.gta5-mods.com/q75/images/2020-nissan-gt-r-nismo/136fa2-1.jpg",
                 "price": "175,000€",
                 "phone": "+359878449672",
-                "description": "Nismo Edition, 2k kilometers, perfect condition, some modifications",
+                "description": "Nismo Edition, 2000 kilometers, perfect condition, some modifications",
                 "_createdOn": 1617194210928,
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
@@ -1367,8 +1367,20 @@
                 "imageUrl": "https://i.gaw.to/vehicles/photos/40/25/402579-2022-audi-r8.jpg",
                 "price": "199,800$",
                 "phone": "+359827589612",
-                "description": "installed twin-turbos, 22k kilometers driven, very good condition",
+                "description": "installed twin-turbos, 22000 kilometers driven, very good condition",
                 "_createdOn": 1617194295474,
+            },
+            "179243z8-1726-17zf-h754-64f032k712jk": {
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
+                "make": "BMW",
+                "model": "M8",
+                "year": "2019",
+                "engine": "4.4L Twin-Turbo V8 Gasoline",
+                "imageUrl": "https://www.auto-data.net/images/f120/BMW-M8-Coupe.jpg",
+                "price": "117,500$",
+                "phone": "+359581372211",
+                "description": "6900 kilometers, stock everything",
+                "_createdOn": 1617194536812,
             }
         },
         comments: {
