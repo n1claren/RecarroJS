@@ -1,7 +1,15 @@
 const CreateCar = () => {
+    const onSubmit = (ev) => {
+        ev.preventDefault();
+
+        const carData = Object.fromEntries(new FormData(ev.target));
+
+        console.log(carData);
+    }
+
     return (
         <section id="create-page" className="auth">
-            <form id="create">
+            <form id="create" onSubmit={onSubmit}>
                 <div className="container">
                     <h1>List a Car</h1>
                     <label htmlFor="make">Make:</label>

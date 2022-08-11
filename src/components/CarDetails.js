@@ -9,7 +9,7 @@ const CarDetails = ({ cars }) => {
             <div className="card">
                 <img className="card-img-top" src={car.imageUrl} alt="car" />
                 <div className="card-body">
-                    <h5 className="card-title">{car.year} {car.make} {car.model}</h5>
+                    <h1 className="card-title">{car.year} {car.make} {car.model}</h1>
                     <p className="card-text">Price: {car.price}</p>
                     <p className="card-text">Engine: {car.engine}</p>
                     <p className="card-text">Seller contact phone: {car.phone}</p>
