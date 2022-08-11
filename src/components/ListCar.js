@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 import * as carService from '../services/carService';
 
 const ListCar = ({listCarHandler}) => {
+    const navigate = useNavigate();
+    
     const onSubmit = (ev) => {
         ev.preventDefault();
 
@@ -9,6 +13,7 @@ const ListCar = ({listCarHandler}) => {
         carService.list(carData)
             .then(result => {
                 listCarHandler(result);
+                navigate("/");
             });
     };
 

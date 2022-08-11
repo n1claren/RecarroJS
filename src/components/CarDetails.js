@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const CarDetails = ({ cars }) => {
     const { carId } = useParams();
@@ -14,6 +14,7 @@ const CarDetails = ({ cars }) => {
                     <p className="card-text">Engine: {car.engine}</p>
                     <p className="card-text">Seller contact phone: {car.phone}</p>
                     <p className="card-text">Description: {car.description}</p>
+                    <Link to={`/AllCars/${carId}/Edit`} className="btn details-btn">Edit</Link>
                 </div>
             </div>
         </div>

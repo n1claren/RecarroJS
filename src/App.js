@@ -14,6 +14,7 @@ import ListCar from "./components/ListCar";
 import AllCars from './components/AllCars.js';
 import CarDetails from './components/CarDetails';
 import Logout from './components/Logout';
+import EditCar from './components/EditCar';
 
 function App() {
     const [cars, setCars] = useState([]);
@@ -22,10 +23,9 @@ function App() {
 
     useEffect(() => {
         carService.getAll()
-            .then(result => {;
+            .then(result => {
                 setCars(result);
             });
-
     }, []);
 
     const userLoginHandler = (authData) => {
@@ -41,8 +41,10 @@ function App() {
             ...state,
             carData
         ]);
+    }
 
-        navigate("/");
+    const editCarHandler = (carId, carData) => {
+        setCars(state => state.map(x => x._id === carId ? carData : x));
     }
 
     return (
@@ -58,6 +60,7 @@ function App() {
                     <Route path="/ListCar" element={<ListCar listCarHandler={listCarHandler} />} />
                     <Route path="/AllCars" element={<AllCars cars={cars} />} />
                     <Route path="/AllCars/:carId" element={<CarDetails cars={cars} />} />
+                    <Route path="/AllCars/:carId/Edit" element={<EditCar editCarHandler={editCarHandler} />} />
                 </Routes>
 
                 <Footer />
