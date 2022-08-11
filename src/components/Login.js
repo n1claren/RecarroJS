@@ -20,7 +20,7 @@ const Login = () => {
         authService.login(email, password)
             .then(authData => {
                 userLoginHandler(authData);
-                navigate("/Login");
+                navigate("/");
             })
             .catch(() => {
                 navigate("/Login");

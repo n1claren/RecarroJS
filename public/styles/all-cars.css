@@ -1,6 +1,10 @@
 .all-cars-container {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
 
 .all-cars {
     top: 50px;

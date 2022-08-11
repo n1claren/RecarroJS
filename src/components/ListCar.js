@@ -1,10 +1,15 @@
-const CreateCar = () => {
+import * as carService from '../services/carService';
+
+const ListCar = ({listCarHandler}) => {
     const onSubmit = (ev) => {
         ev.preventDefault();
 
         const carData = Object.fromEntries(new FormData(ev.target));
 
-        console.log(carData);
+        carService.list(carData)
+            .then(result => {
+                listCarHandler(result);
+            });
     };
 
     return (
@@ -70,4 +75,4 @@ const CreateCar = () => {
     );
 }
 
-export default CreateCar;
+export default ListCar;

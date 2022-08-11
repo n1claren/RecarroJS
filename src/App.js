@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
 import * as carService from "./services/carService";
@@ -18,6 +18,7 @@ import Logout from './components/Logout';
 function App() {
     const [cars, setCars] = useState([]);
     const [user, setUser] = useLocalStorage('auth', {});
+    const navigate = useNavigate();
 
     useEffect(() => {
         carService.getAll()
@@ -35,6 +36,15 @@ function App() {
         setUser({});
     }
 
+    const listCarHandler = (carData) => {
+        setCars(state => [
+            ...state,
+            carData
+        ]);
+
+        navigate("/");
+    }
+
     return (
         <AuthContext.Provider value={{user, userLoginHandler, userLogoutHandler}}>
             <div className="App">
@@ -45,7 +55,7 @@ function App() {
                     <Route path="/Login" element={<Login />} />
                     <Route path="/Logout" element={<Logout />} />
                     <Route path="/Register" element={<Register />} />
-                    <Route path="/ListCar" element={<ListCar />} />
+                    <Route path="/ListCar" element={<ListCar listCarHandler={listCarHandler} />} />
                     <Route path="/AllCars" element={<AllCars cars={cars} />} />
                     <Route path="/AllCars/:carId" element={<CarDetails cars={cars} />} />
                 </Routes>
