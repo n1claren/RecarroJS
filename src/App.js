@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import * as carService from "./services/carService";
 import { AuthContext } from "./contexts/AuthContext";
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -16,7 +17,7 @@ import Logout from './components/Logout';
 
 function App() {
     const [cars, setCars] = useState([]);
-    const [user, setUser] = useState({});
+    const [user, setUser] = useLocalStorage('auth', {});
 
     useEffect(() => {
         carService.getAll()
