@@ -5,7 +5,7 @@ const CreateCar = () => {
         const carData = Object.fromEntries(new FormData(ev.target));
 
         console.log(carData);
-    }
+    };
 
     return (
         <section id="create-page" className="auth">
