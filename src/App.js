@@ -12,6 +12,7 @@ import Register from "./components/Register";
 import ListCar from "./components/ListCar";
 import AllCars from './components/AllCars.js';
 import CarDetails from './components/CarDetails';
+import Logout from './components/Logout';
 
 function App() {
     const [cars, setCars] = useState([]);
@@ -29,14 +30,19 @@ function App() {
         setUser(authData);
     }
 
+    const userLogoutHandler = () => {
+        setUser({});
+    }
+
     return (
-        <AuthContext.Provider value={{user, userLoginHandler}}>
+        <AuthContext.Provider value={{user, userLoginHandler, userLogoutHandler}}>
             <div className="App">
                 <Header />
 
                 <Routes>
                     <Route path="/" element={<Homepage cars={cars} />} />
                     <Route path="/Login" element={<Login />} />
+                    <Route path="/Logout" element={<Logout />} />
                     <Route path="/Register" element={<Register />} />
                     <Route path="/ListCar" element={<ListCar />} />
                     <Route path="/AllCars" element={<AllCars cars={cars} />} />

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { login } from '../services/authService';
+import * as authService from '../services/authService';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 
@@ -17,12 +17,14 @@ const Login = () => {
             password
         } = Object.fromEntries(new FormData(ev.target));
 
-        login(email, password)
+        authService.login(email, password)
             .then(authData => {
                 userLoginHandler(authData);
-                navigate("/");
+                navigate("/Login");
             })
-            .catch();
+            .catch(() => {
+                navigate("/Login");
+            });
     };
 
     return (
