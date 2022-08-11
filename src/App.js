@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
 import * as carService from "./services/carService";
@@ -19,7 +19,6 @@ import EditCar from './components/EditCar';
 function App() {
     const [cars, setCars] = useState([]);
     const [user, setUser] = useLocalStorage('auth', {});
-    const navigate = useNavigate();
 
     useEffect(() => {
         carService.getAll()

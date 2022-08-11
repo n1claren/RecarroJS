@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
  
 import * as authService from "../services/authService";
 import { AuthContext } from "../contexts/AuthContext";
@@ -8,6 +8,7 @@ import { AuthContext } from "../contexts/AuthContext";
 const Register = () => {
     const { userLoginHandler } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [error, setError] = useState("");
 
     const onSubmit = (ev) => {
         ev.preventDefault();
@@ -19,6 +20,7 @@ const Register = () => {
         const confirmPassword = formData.get('confirm-password');
 
         if (password !== confirmPassword) {
+            setError('Password and Confirm Password do not match.');
             return;
         }
 
@@ -34,6 +36,7 @@ const Register = () => {
             <form id="register" onSubmit={onSubmit}>
                 <div className="container">
                     <h1>Register</h1>
+                    {error.length > 0 ? <div className='error-div'>{error}</div> : ''}
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"

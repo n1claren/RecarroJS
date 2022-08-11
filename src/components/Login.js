@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
 import * as authService from '../services/authService';
 import { useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import { AuthContext } from '../contexts/AuthContext';
 
 const Login = () => {
     const { userLoginHandler } = useContext(AuthContext);
     const navigate = useNavigate();
+    const [error, setError] = useState("");
 
     const onSubmit = (ev) => {
         ev.preventDefault();
@@ -19,6 +20,10 @@ const Login = () => {
 
         authService.login(email, password)
             .then(authData => {
+                if (authData.code === 403) {
+                    setError(authData.message);
+                    return;
+                }
                 userLoginHandler(authData);
                 navigate("/");
             })
@@ -32,6 +37,7 @@ const Login = () => {
             <form id="login" onSubmit={onSubmit}>
                 <div className="container">
                     <h1>Login</h1>
+                    {error.length > 0 ? <div className='error-div'>{error}</div> : ''}
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"
