@@ -7,15 +7,21 @@ import { AuthContext } from '../contexts/AuthContext';
 const DeleteCar = ({ cars, deleteCarHandler }) => {
     const { carId } = useParams();
     const [car, setCar] = useState({});
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const navigate = useNavigate();
 
     useEffect(() => {
         setCar(cars.find(x => x._id === carId));
     }, [carId]);
 
+    const carBelongsToUser = car._ownerId === user._id;
+
     const onClick = (ev) => {
         ev.preventDefault();
+
+        if (!carBelongsToUser) {
+            return;
+        }
 
         carService.deleteCar(carId);
         deleteCarHandler(carId);

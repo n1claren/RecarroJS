@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 
 import * as carService from '../services/carService';
+import { AuthContext } from "../contexts/AuthContext";
 
-const EditCar = ({editCarHandler}) => {
+const EditCar = ({ editCarHandler }) => {
     const [currentCar, setCurrentCar] = useState({});
     const { carId } = useParams();
     const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
         carService.getOne(carId)
@@ -15,8 +17,14 @@ const EditCar = ({editCarHandler}) => {
             });
     }, [carId]);
 
+    const carBelongsToUser = currentCar._ownerId === user._id;
+
     const onSubmit = (ev) => {
         ev.preventDefault();
+
+        if (!carBelongsToUser) {
+            return;
+        }
 
         const carData = Object.fromEntries(new FormData(ev.target));
 

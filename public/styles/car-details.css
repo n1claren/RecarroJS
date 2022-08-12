@@ -4,3 +4,14 @@
     top: 200px;
     left: 33%;        
 }
+
+.disabled {
+    pointer-events: none;
+    background-color: gray;
+    font-size: 1.4rem;
+    text-transform: uppercase; 
+    padding-top: 20px;
+    margin-top: 10px;
+    color: darkgray;
+    padding: 0.9em 1.4em;
+}
