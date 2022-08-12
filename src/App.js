@@ -15,6 +15,7 @@ import AllCars from './components/AllCars.js';
 import CarDetails from './components/CarDetails';
 import Logout from './components/Logout';
 import EditCar from './components/EditCar';
+import DeleteCar from './components/DeleteCar';
 
 function App() {
     const [cars, setCars] = useState([]);
@@ -46,6 +47,10 @@ function App() {
         setCars(state => state.map(x => x._id === carId ? carData : x));
     }
 
+    const deleteCarHandler = (carId) => {
+        setCars(state => state.filter(x => x._id !== carId));
+    }
+
     return (
         <AuthContext.Provider value={{user, userLoginHandler, userLogoutHandler}}>
             <div className="App">
@@ -60,6 +65,7 @@ function App() {
                     <Route path="/AllCars" element={user.email ? <AllCars cars={cars} /> : <Login />} />
                     <Route path="/AllCars/:carId" element={user.email ? <CarDetails cars={cars} /> : <Login />} />
                     <Route path="/AllCars/:carId/Edit" element={user.email ? <EditCar editCarHandler={editCarHandler} /> : <Login />} />
+                    <Route path="/AllCars/:carId/Delete" element={user.email ? <DeleteCar deleteCarHandler={deleteCarHandler} cars={cars} /> : <Login />} />
                 </Routes>
 
                 <Footer />

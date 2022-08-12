@@ -20,6 +20,7 @@ const CarDetails = ({ cars }) => {
                     <p className="card-text">Seller contact phone: {car.phone}</p>
                     <p className="card-text">Description: {car.description}</p>
                     <Link to={`/AllCars/${carId}/Edit`} className="btn details-btn">Edit</Link>
+                    <Link to={`/AllCars/${carId}/Delete`} className="btn details-btn">Delete</Link>
                 </div>
             </div>
         </div>
