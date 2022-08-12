@@ -16,6 +16,7 @@ import CarDetails from './components/CarDetails';
 import Logout from './components/Logout';
 import EditCar from './components/EditCar';
 import DeleteCar from './components/DeleteCar';
+import MyCars from './components/MyCars';
 
 function App() {
     const [cars, setCars] = useState([]);
@@ -63,6 +64,7 @@ function App() {
                     <Route path="/Register" element={<Register />} />
                     <Route path="/ListCar" element={user.email ? <ListCar listCarHandler={listCarHandler} /> : <Login />} />
                     <Route path="/AllCars" element={user.email ? <AllCars cars={cars} /> : <Login />} />
+                    <Route path="/MyCars" element={user.email ? <MyCars cars={cars} /> : <Login />} />
                     <Route path="/AllCars/:carId" element={user.email ? <CarDetails cars={cars} /> : <Login />} />
                     <Route path="/AllCars/:carId/Edit" element={user.email ? <EditCar editCarHandler={editCarHandler} /> : <Login />} />
                     <Route path="/AllCars/:carId/Delete" element={user.email ? <DeleteCar deleteCarHandler={deleteCarHandler} cars={cars} /> : <Login />} />

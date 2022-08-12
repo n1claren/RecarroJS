@@ -21,6 +21,10 @@ const Header = () => {
                         <>
                             <span>Welcome, {user.email.split('@')[0]}.</span>
 
+                            <Link to="MyCars">
+                                My Cars
+                            </Link>
+
                             <Link to="AllCars">
                                 All Cars
                             </Link>
