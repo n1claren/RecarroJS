@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Using RecarroJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made for educational purposes on the ReactJS course at [SoftUni](https://softuni.bg).
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+On the landing page you can:
 
-### `npm start`
+### `login` and `register`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+as well as see the last three cars added to the server. There are 4 hardcoded cars (Lamborghini Huracan, Nissan GT-R, BMW M8 and an Audi R8). They belong to the hardcoded user peter@abv.bg with password '123456'. You must login to see any other content. There are no navs to any other pages, but if you try to access them via the URL, and you are not logged in, you will be redirected to the login page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The `Recarro®` button sends you to the homepage.
 
-### `npm test`
+Once you login you will see three new navs:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `My Cars`
 
-### `npm run build`
+Here you can see all the cars you have listed for sale.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `All Cars`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here you can see all the cars listed for sale.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All the cars on both of those pages will have a `Details` button. This will show you full information about the car as well as give you options to `Edit` or `Delete` it. The edit / delete buttons will be disabled if you are not logged as the user who listed the car. When you hit `Delete` you are given 3 options:
 
-### `npm run eject`
+`Yes` - The car is deleted.
+`No` - You are redirected to the homepage.
+`Edit it` - Loads an edit form with the car data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `List Car`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here is a form you can fill to list a car on the server. All the fields (make, model, year, engine, image, price, phone number and description) have data validation and the form will not allow you to submit it if any of the requirements are not met:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Make,
+Model,
+Engine,
+Price all require a string input between 3 and 20 characters.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Year takes a number between 1900 and the current year.
 
-## Learn More
+Image validates if you entered a VALID image link.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Phone requires you to enter a string with a length of 10 or 13 symbols (for Bulgarian mobile phones whether you input with with a 0 or +359).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Description requires a text no longer than 300 symbols. 
