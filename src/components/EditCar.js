@@ -13,7 +13,7 @@ const EditCar = ({editCarHandler}) => {
             .then(carData => {
                 setCurrentCar(carData);
             });
-    }, []);
+    }, [carId]);
 
     const onSubmit = (ev) => {
         ev.preventDefault();
@@ -23,7 +23,7 @@ const EditCar = ({editCarHandler}) => {
         carService.edit(carId, carData)
             .then(result => {
                 editCarHandler(carId, result);
-                navigate(`/AllCars/${carId}`);
+                navigate(`/AllCars/`);
             });
     };
 

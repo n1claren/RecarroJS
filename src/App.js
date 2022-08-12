@@ -56,10 +56,10 @@ function App() {
                     <Route path="/Login" element={<Login />} />
                     <Route path="/Logout" element={<Logout />} />
                     <Route path="/Register" element={<Register />} />
-                    <Route path="/ListCar" element={<ListCar listCarHandler={listCarHandler} />} />
-                    <Route path="/AllCars" element={<AllCars cars={cars} />} />
-                    <Route path="/AllCars/:carId" element={<CarDetails cars={cars} />} />
-                    <Route path="/AllCars/:carId/Edit" element={<EditCar editCarHandler={editCarHandler} />} />
+                    <Route path="/ListCar" element={user.email ? <ListCar listCarHandler={listCarHandler} /> : <Login />} />
+                    <Route path="/AllCars" element={user.email ? <AllCars cars={cars} /> : <Login />} />
+                    <Route path="/AllCars/:carId" element={user.email ? <CarDetails cars={cars} /> : <Login />} />
+                    <Route path="/AllCars/:carId/Edit" element={user.email ? <EditCar editCarHandler={editCarHandler} /> : <Login />} />
                 </Routes>
 
                 <Footer />

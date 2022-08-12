@@ -1,8 +1,13 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const CarDetails = ({ cars }) => {
     const { carId } = useParams();
-    const car = cars.find(x => x._id === carId);
+    const [car, setCar] = useState({});
+
+    useEffect(() => {
+        setCar(cars.find(x => x._id === carId));
+    }, [carId]);
 
     return (
         <div className="card-container">

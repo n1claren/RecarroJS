@@ -35,10 +35,6 @@ const Header = () => {
                         </>
                         :
                         <>
-                            <Link to="AllCars">
-                                All Cars
-                            </Link>
-
                             <Link to="Login">
                                 Login
                             </Link>
